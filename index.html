@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MFG Reno — Home Renovation, Energy & Smart Home</title>
+  <meta name="description" content="Full-scope home renovations, solar energy systems, Generac generators, and smart home automation with Ecobee & Google Nest." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: #0F0F0F; color: #F0EDE8; overflow-x: hidden; }
+
+```
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 20px 48px;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: all 0.4s ease;
+}
+.nav.scrolled {
+  background: rgba(15,15,15,0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(200,146,58,0.15);
+  padding: 14px 48px;
+}
+.logo { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 900; letter-spacing: 2px; color: #F0EDE8; text-transform: uppercase; text-decoration: none; }
+.logo span { color: #C8923A; }
+.nav-links { display: flex; gap: 36px; list-style: none; }
+.nav-links a { color: rgba(240,237,232,0.7); text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; transition: color 0.2s; }
+.nav-links a:hover { color: #C8923A; }
+.btn-primary { background: #C8923A; color: #0F0F0F; border: none; padding: 12px 28px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; cursor: pointer; transition: all 0.25s; text-decoration: none; display: inline-block; }
+.btn-primary:hover { background: #E0A84A; transform: translateY(-1px); }
+.btn-outline { background: transparent; border: 1.5px solid rgba(240,237,232,0.4); color: #F0EDE8; padding: 12px 28px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; cursor: pointer; transition: all 0.25s; text-decoration: none; display: inline-block; }
+.btn-outline:hover { border-color: #C8923A; color: #C8923A; }
+
+.hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 0 48px; position: relative; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 50%, rgba(200,146,58,0.08) 0%, transparent 65%); pointer-events: none; }
+.hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(200,146,58,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(200,146,58,0.04) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; }
+.hero-content { position: relative; z-index: 2; }
+.hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #C8923A; margin-bottom: 24px; }
+.hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: #C8923A; }
+.hero-h1 { font-family: 'Playfair Display', serif; font-size: clamp(48px, 5vw, 80px); font-weight: 900; line-height: 1.05; margin-bottom: 28px; }
+.hero-h1 em { color: #C8923A; font-style: normal; }
+.hero-sub { font-size: 17px; font-weight: 300; color: rgba(240,237,232,0.65); line-height: 1.7; max-width: 480px; margin-bottom: 44px; }
+.hero-ctas { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+.hero-visual { position: relative; z-index: 2; display: flex; justify-content: center; align-items: center; }
+.hero-card-stack { position: relative; width: 360px; height: 380px; }
+.hero-card { position: absolute; background: rgba(255,255,255,0.04); border: 1px solid rgba(200,146,58,0.15); padding: 28px; }
+.hero-card:nth-child(1) { top: 0; left: 20px; width: 290px; transform: rotate(-2deg); }
+.hero-card:nth-child(2) { top: 40px; left: 0; width: 310px; transform: rotate(1deg); background: rgba(200,146,58,0.06); }
+.hero-card:nth-child(3) { top: 80px; left: 10px; width: 330px; z-index: 3; }
+.card-label { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #C8923A; margin-bottom: 8px; }
+.card-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+.card-desc { font-size: 13px; color: rgba(240,237,232,0.55); line-height: 1.6; }
+.card-status { margin-top: 16px; display: flex; align-items: center; font-size: 12px; color: rgba(240,237,232,0.5); }
+.card-dot { width: 8px; height: 8px; border-radius: 50%; background: #5B9E6F; display: inline-block; margin-right: 8px; }
+
+.stats-bar { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(200,146,58,0.2); border-bottom: 1px solid rgba(200,146,58,0.2); }
+.stat-item { padding: 40px 24px; border-right: 1px solid rgba(200,146,58,0.1); text-align: center; }
+.stat-item:last-child { border-right: none; }
+.stat-value { font-family: 'Playfair Display', serif; font-size: 44px; font-weight: 900; color: #C8923A; line-height: 1; }
+.stat-label { font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(240,237,232,0.45); margin-top: 8px; }
+
+.section { padding: 100px 48px; }
+.section-label { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #C8923A; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+.section-label::after { content: ''; height: 1px; background: rgba(200,146,58,0.3); width: 60px; }
+.section-h2 { font-family: 'Playfair Display', serif; font-size: clamp(32px, 3.5vw, 52px); font-weight: 900; line-height: 1.1; margin-bottom: 60px; max-width: 520px; }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.service-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); padding: 48px 40px; cursor: pointer; transition: all 0.3s ease; position: relative; overflow: hidden; }
+.service-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; transform: scaleX(0); transition: transform 0.3s ease; }
+.service-card:hover { background: rgba(255,255,255,0.06); transform: translateY(-4px); }
+.service-card:hover::after { transform: scaleX(1); }
+.service-card.renovation::after { background: #C8923A; }
+.service-card.energy::after { background: #5B9E6F; }
+.service-card.smart::after { background: #4A8FC2; }
+.service-icon { font-size: 36px; margin-bottom: 24px; display: block; }
+.service-tagline { font-size: 10px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 12px; color: rgba(240,237,232,0.4); transition: color 0.2s; }
+.service-card.renovation:hover .service-tagline { color: #C8923A; }
+.service-card.energy:hover .service-tagline { color: #5B9E6F; }
+.service-card.smart:hover .service-tagline { color: #4A8FC2; }
+.service-title { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; margin-bottom: 16px; line-height: 1.2; }
+.service-desc { font-size: 14px; color: rgba(240,237,232,0.55); line-height: 1.75; }
+.service-arrow { display: inline-block; margin-top: 28px; font-size: 13px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: rgba(240,237,232,0.35); transition: all 0.2s; }
+.service-card:hover .service-arrow { color: #C8923A; transform: translateX(4px); }
+
+.quote-section { margin: 0 48px 100px; background: linear-gradient(135deg, rgba(200,146,58,0.1) 0%, rgba(200,146,58,0.03) 100%); border: 1px solid rgba(200,146,58,0.25); padding: 72px 64px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.quote-badge { display: inline-block; background: #C8923A; color: #0F0F0F; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 6px 14px; margin-bottom: 24px; }
+.quote-h2 { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
+.quote-sub { font-size: 15px; color: rgba(240,237,232,0.6); line-height: 1.7; margin-bottom: 36px; }
+.quote-features { list-style: none; }
+.quote-features li { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: rgba(240,237,232,0.7); margin-bottom: 14px; line-height: 1.5; }
+.quote-features li::before { content: '✓'; color: #C8923A; font-weight: 700; flex-shrink: 0; }
+.quote-mockup { background: rgba(0,0,0,0.3); border: 1px solid rgba(200,146,58,0.2); padding: 28px; }
+.mockup-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #C8923A; margin-bottom: 12px; font-weight: 600; }
+.mockup-upload { width: 100%; background: rgba(255,255,255,0.05); border: 1.5px dashed rgba(200,146,58,0.3); padding: 32px 20px; text-align: center; color: rgba(240,237,232,0.3); font-size: 13px; margin-bottom: 12px; }
+.mockup-input { background: rgba(255,255,255,0.04); padding: 10px 14px; font-size: 12px; color: rgba(240,237,232,0.35); margin-bottom: 16px; }
+.btn-disabled { background: #C8923A; color: #0F0F0F; border: none; padding: 12px 28px; width: 100%; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; opacity: 0.45; cursor: not-allowed; }
+.mockup-note { font-size: 12px; color: rgba(240,237,232,0.3); text-align: center; margin-top: 12px; }
+
+.contact-section { padding: 100px 48px; border-top: 1px solid rgba(255,255,255,0.06); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.contact-info { display: flex; flex-direction: column; gap: 28px; margin-top: 40px; }
+.contact-item { display: flex; align-items: flex-start; gap: 16px; }
+.contact-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+.contact-item-label { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #C8923A; margin-bottom: 4px; }
+.contact-item-value { font-size: 15px; color: rgba(240,237,232,0.8); }
+.contact-form { display: flex; flex-direction: column; gap: 16px; margin-top: 40px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-input, .form-textarea, .form-select { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); color: #F0EDE8; padding: 14px 18px; font-family: 'DM Sans', sans-serif; font-size: 14px; width: 100%; transition: border-color 0.2s; outline: none; }
+.form-input:focus, .form-textarea:focus, .form-select:focus { border-color: #C8923A; }
+.form-input::placeholder, .form-textarea::placeholder { color: rgba(240,237,232,0.3); }
+.form-select { appearance: none; cursor: pointer; }
+.form-select option { background: #1a1a1a; color: #F0EDE8; }
+.form-textarea { resize: vertical; min-height: 120px; }
+
+.footer { border-top: 1px solid rgba(255,255,255,0.08); padding: 40px 48px; display: flex; justify-content: space-between; align-items: center; }
+.footer-logo { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; }
+.footer-logo span { color: #C8923A; }
+.footer-copy { font-size: 13px; color: rgba(240,237,232,0.35); }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: rgba(240,237,232,0.35); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: #C8923A; }
+
+@media (max-width: 900px) {
+  .nav { padding: 18px 24px; }
+  .nav.scrolled { padding: 12px 24px; }
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; padding: 120px 24px 80px; text-align: center; }
+  .hero-visual { display: none; }
+  .hero-eyebrow { justify-content: center; }
+  .hero-sub { margin: 0 auto 44px; }
+  .hero-ctas { justify-content: center; }
+  .stats-bar { grid-template-columns: 1fr 1fr; }
+  .stat-item { border-right: none; border-bottom: 1px solid rgba(200,146,58,0.1); padding: 28px; }
+  .services-grid { grid-template-columns: 1fr; }
+  .section { padding: 64px 24px; }
+  .quote-section { grid-template-columns: 1fr; gap: 32px; margin: 0 24px 64px; padding: 40px 28px; }
+  .contact-section { grid-template-columns: 1fr; gap: 0; padding: 64px 24px; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer { flex-direction: column; gap: 20px; text-align: center; padding: 36px 24px; }
+}
+```
+
+  </style>
+</head>
+<body>
+
+  <nav class="nav" id="navbar">
+    <a href="#" class="logo">MFG<span>Reno</span></a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#quote">Quote Tool</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn-primary">Get a Quote</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Licensed &amp; Insured Contractors</div>
+      <h1 class="hero-h1">Your Home.<br><em>Elevated.</em></h1>
+      <p class="hero-sub">From full-scale renovations to solar energy systems and smart home automation — MFG Reno delivers end-to-end home transformation with expert craftsmanship.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary">Start Your Project &rarr;</a>
+        <a href="#services" class="btn-outline">View Services</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card-stack">
+        <div class="hero-card">
+          <div class="card-label">Renovation</div>
+          <div class="card-title">Kitchen Remodel</div>
+        </div>
+        <div class="hero-card">
+          <div class="card-label">Energy</div>
+          <div class="card-title">Solar + Battery</div>
+        </div>
+        <div class="hero-card">
+          <div class="card-label">Active Project</div>
+          <div class="card-title">Smith Residence</div>
+          <p class="card-desc">Smart home + solar installation, 14kW system with Generac backup and Ecobee integration.</p>
+          <div class="card-status"><span class="card-dot"></span>In progress &middot; Est. complete Apr 28</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stats-bar">
+    <div class="stat-item"><div class="stat-value">500+</div><div class="stat-label">Projects Completed</div></div>
+    <div class="stat-item"><div class="stat-value">12yr</div><div class="stat-label">In Business</div></div>
+    <div class="stat-item"><div class="stat-value">98%</div><div class="stat-label">Client Satisfaction</div></div>
+    <div class="stat-item"><div class="stat-value">3</div><div class="stat-label">Trusted Suppliers</div></div>
+  </div>
+
+  <section class="section" id="services">
+    <div class="section-label">What We Do</div>
+    <h2 class="section-h2">Three Ways We Transform Your Home</h2>
+    <div class="services-grid">
+      <div class="service-card renovation">
+        <span class="service-icon">&#127968;</span>
+        <div class="service-tagline">Spaces Reimagined</div>
+        <div class="service-title">Home Renovation</div>
+        <p class="service-desc">Full-scope residential renovations — kitchens, baths, basements, additions, and whole-home transformations built to last.</p>
+        <span class="service-arrow">Learn more &rarr;</span>
+      </div>
+      <div class="service-card energy">
+        <span class="service-icon">&#9889;</span>
+        <div class="service-tagline">Power Your Future</div>
+        <div class="service-title">Energy Solutions</div>
+        <p class="service-desc">Solar panels, battery storage, and Generac backup generators engineered to reduce your bills and protect your home from outages.</p>
+        <span class="service-arrow">Learn more &rarr;</span>
+      </div>
+      <div class="service-card smart">
+        <span class="service-icon">&#127969;</span>
+        <div class="service-tagline">Intelligence Built In</div>
+        <div class="service-title">Smart Home</div>
+        <p class="service-desc">Ecobee and Google Nest integrations — thermostats, security, and automation systems that make your home work smarter.</p>
+        <span class="service-arrow">Learn more &rarr;</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="quote-section" id="quote">
+    <div>
+      <span class="quote-badge">Coming Soon</span>
+      <h2 class="quote-h2">Get a Real Quote &mdash; Instantly</h2>
+      <p class="quote-sub">Upload photos of your space, describe your project, and our system will generate a detailed estimate linked directly to our supplier pricing. No guesswork. No surprises.</p>
+      <ul class="quote-features">
+        <li>Upload photos and describe your project in plain language</li>
+        <li>AI identifies materials and scope of work</li>
+        <li>Pricing pulled live from our 3 trusted suppliers</li>
+        <li>Receive a detailed, itemized estimate within minutes</li>
+      </ul>
+    </div>
+    <div>
+      <div class="quote-mockup">
+        <div class="mockup-label">Your Project</div>
+        <div class="mockup-upload">&#128247; Upload Photos Here</div>
+        <div class="mockup-input">Describe your project...</div>
+        <button class="btn-disabled">Generate Estimate (Coming Soon)</button>
+        <p class="mockup-note">In the meantime, contact us for a free consultation</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="contact-section" id="contact">
+    <div>
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-h2">Let's Talk About Your Project</h2>
+      <div class="contact-info">
+        <div class="contact-item">
+          <span class="contact-icon">&#128231;</span>
+          <div>
+            <div class="contact-item-label">Email</div>
+            <div class="contact-item-value">contact@mfgreno.com</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">&#128205;</span>
+          <div>
+            <div class="contact-item-label">Service Area</div>
+            <div class="contact-item-value">Greater Reno, NV &amp; Surrounding Areas</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">&#128336;</span>
+          <div>
+            <div class="contact-item-label">Hours</div>
+            <div class="contact-item-value">Mon&ndash;Fri 8am&ndash;6pm &middot; Sat by appointment</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="contact-form">
+        <div class="form-row">
+          <input class="form-input" type="text" placeholder="First Name" />
+          <input class="form-input" type="text" placeholder="Last Name" />
+        </div>
+        <input class="form-input" type="email" placeholder="Email Address" />
+        <input class="form-input" type="tel" placeholder="Phone Number" />
+        <select class="form-select">
+          <option value="" disabled selected>Type of Project</option>
+          <option>Home Renovation</option>
+          <option>Solar / Energy</option>
+          <option>Generac Generator</option>
+          <option>Smart Home Automation</option>
+          <option>Multiple Services</option>
+        </select>
+        <textarea class="form-textarea" placeholder="Tell us about your project..."></textarea>
+        <button class="btn-primary" style="width:100%; padding:16px; font-size:14px;">Send Message &rarr;</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-logo">MFG<span>Reno</span></div>
+    <div class="footer-copy">&copy; 2026 MFG Reno &middot; All rights reserved</div>
+    <div class="footer-links">
+      <a href="#services">Services</a>
+      <a href="#quote">Quote Tool</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+  </script>
+
+</body>
+</html>
