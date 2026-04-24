@@ -117,7 +117,6 @@
   <div class="roles-section">
     <div class="section-label">Open Positions</div>
     <div class="section-h2">Current Openings</div>
-
     <div class="roles-grid">
       <div class="role-card">
         <span class="role-icon">🏚️</span>
@@ -157,45 +156,52 @@
       </div>
     </div>
 
-    <!-- APPLICATION FORM -->
     <div class="apply-section" id="apply">
       <h2 class="apply-h2">Apply Now</h2>
       <p class="apply-sub">Fill out the form below. We review every application and will be in touch within 3–5 business days. Fields marked * are required.</p>
 
-      <div class="form-grid">
-        <input class="form-input" type="text" id="a-first" placeholder="First Name *" />
-        <input class="form-input" type="text" id="a-last" placeholder="Last Name *" />
-      </div>
-      <input class="form-input" type="email" id="a-email" placeholder="Email Address *" />
-      <input class="form-input" type="tel" id="a-phone" placeholder="Phone Number *" />
-      <select class="form-select" id="a-position">
-        <option value="" disabled selected>Position Applying For *</option>
-        <option>Exterior Renovation Crew</option>
-        <option>Solar &amp; Generac Installer</option>
-        <option>Smart Home Technician</option>
-        <option>Insurance Claim Specialist</option>
-        <option>Sales &amp; Project Consultant</option>
-        <option>General Application</option>
-      </select>
-      <select class="form-select" id="a-location">
-        <option value="" disabled selected>Preferred Location *</option>
-        <option>Houston, TX</option>
-        <option>Dallas, TX</option>
-        <option>Austin, TX</option>
-        <option>Open to All Locations</option>
-      </select>
-      <textarea class="form-textarea" id="a-message" placeholder="Tell us about yourself — your experience, what you're looking for, and why MFG Reno (optional)..."></textarea>
+      <form action="https://formspree.io/f/xnjlwner" method="POST" enctype="multipart/form-data" id="careers-form">
+        <input type="hidden" name="_subject" value="New Job Application — MFG Reno" />
+        <input type="hidden" name="_next" value="https://mfgreno.com/careers/?thanks=true" />
+        <div class="form-grid">
+          <input class="form-input" type="text" name="first_name" placeholder="First Name *" required />
+          <input class="form-input" type="text" name="last_name" placeholder="Last Name *" required />
+        </div>
+        <input class="form-input" type="email" name="email" placeholder="Email Address *" required />
+        <input class="form-input" type="tel" name="phone" placeholder="Phone Number *" required />
+        <select class="form-select" name="position" required>
+          <option value="" disabled selected>Position Applying For *</option>
+          <option>Exterior Renovation Crew</option>
+          <option>Solar &amp; Generac Installer</option>
+          <option>Smart Home Technician</option>
+          <option>Insurance Claim Specialist</option>
+          <option>Sales &amp; Project Consultant</option>
+          <option>General Application</option>
+        </select>
+        <select class="form-select" name="location" required>
+          <option value="" disabled selected>Preferred Location *</option>
+          <option>Houston, TX</option>
+          <option>Dallas, TX</option>
+          <option>Austin, TX</option>
+          <option>Open to All Locations</option>
+        </select>
+        <textarea class="form-textarea" name="message" placeholder="Tell us about yourself — your experience, what you're looking for, and why MFG Reno (optional)..."></textarea>
+        <div class="resume-box" onclick="document.getElementById('resumeFile').click()">
+          <input type="file" id="resumeFile" name="resume" accept=".pdf,.doc,.docx" onchange="handleFile(this)" />
+          <span class="resume-icon">📄</span>
+          <div class="resume-text"><strong>Click to upload your resume</strong><br />PDF, DOC, or DOCX accepted</div>
+          <div id="fileName" style="margin-top:8px;font-size:12px;color:#C8923A;min-height:16px;"></div>
+        </div>
+        <p class="resume-alt">Or email your resume to <a href="mailto:contact@mfgreno.com?subject=Job Application">contact@mfgreno.com</a></p>
+        <button type="submit" class="btn-primary" style="width:100%;padding:15px;font-size:14px;">Submit Application &rarr;</button>
+        <p class="form-msg" id="a-msg"></p>
+      </form>
 
-      <div class="resume-box" onclick="document.getElementById('resumeFile').click()">
-        <input type="file" id="resumeFile" accept=".pdf,.doc,.docx" onchange="handleFile(this)" />
-        <span class="resume-icon">📄</span>
-        <div class="resume-text"><strong>Click to upload your resume</strong><br />PDF, DOC, or DOCX accepted</div>
-        <div id="fileName" style="margin-top:8px;font-size:12px;color:#C8923A;min-height:16px;"></div>
+      <div id="thanks-msg" style="display:none;text-align:center;padding:32px 0;">
+        <div style="font-size:36px;margin-bottom:12px;">✅</div>
+        <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;margin-bottom:10px;">Application Received!</div>
+        <p style="font-size:14px;color:rgba(240,237,232,0.6);line-height:1.7;">Thanks for applying to MFG Reno. We review every application and will be in touch within 3–5 business days.</p>
       </div>
-      <p class="resume-alt">Or email your resume to <a href="mailto:contact@mfgreno.com?subject=Job Application">contact@mfgreno.com</a> with subject "Job Application"</p>
-
-      <button class="btn-primary" onclick="submitApp()" style="width:100%;padding:15px;font-size:14px;">Submit Application &rarr;</button>
-      <p class="form-msg" id="a-msg"></p>
     </div>
   </div>
 
@@ -216,36 +222,12 @@
   <script>
     const n = document.getElementById('navbar');
     window.addEventListener('scroll', () => n.classList.toggle('scrolled', window.scrollY > 60));
-
     function handleFile(input) {
       if (input.files[0]) document.getElementById('fileName').textContent = '✓ ' + input.files[0].name;
     }
-
-    function submitApp() {
-      const first = document.getElementById('a-first').value.trim();
-      const last = document.getElementById('a-last').value.trim();
-      const email = document.getElementById('a-email').value.trim();
-      const phone = document.getElementById('a-phone').value.trim();
-      const pos = document.getElementById('a-position').value;
-      const loc = document.getElementById('a-location').value;
-      const msg = document.getElementById('a-msg');
-
-      if (!first || !last) { msg.textContent = 'Please enter your full name.'; msg.style.color = '#e07070'; return; }
-      if (!email || !email.includes('@')) { msg.textContent = 'Please enter a valid email.'; msg.style.color = '#e07070'; return; }
-      if (!phone) { msg.textContent = 'Please enter your phone number.'; msg.style.color = '#e07070'; return; }
-      if (!pos) { msg.textContent = 'Please select a position.'; msg.style.color = '#e07070'; return; }
-      if (!loc) { msg.textContent = 'Please select your preferred location.'; msg.style.color = '#e07070'; return; }
-
-      const subject = encodeURIComponent('Job Application — ' + pos + ' (' + loc + ')');
-      const body = encodeURIComponent(
-        'Name: ' + first + ' ' + last + '\nEmail: ' + email + '\nPhone: ' + phone +
-        '\nPosition: ' + pos + '\nLocation: ' + loc +
-        '\n\nMessage:\n' + document.getElementById('a-message').value +
-        '\n\n(Please attach resume to this email)'
-      );
-      window.location.href = 'mailto:contact@mfgreno.com?subject=' + subject + '&body=' + body;
-      msg.style.color = '#C8923A';
-      msg.textContent = 'Your email client will open — please attach your resume and send!';
+    if (window.location.search.includes('thanks=true')) {
+      document.getElementById('careers-form').style.display = 'none';
+      document.getElementById('thanks-msg').style.display = 'block';
     }
   </script>
 </body>
