@@ -47,6 +47,13 @@
     .btn-primary:hover { background: #E0A84A; transform: translateY(-1px); }
     .btn-outline { background: transparent; border: 1.5px solid rgba(240,237,232,0.4); color: #F0EDE8; padding: 12px 28px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; cursor: pointer; transition: all 0.25s; text-decoration: none; display: inline-block; }
     .btn-outline:hover { border-color: #C8923A; color: #C8923A; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #F0EDE8; transition: all 0.3s; }
+.mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: rgba(15,15,15,0.98); border-bottom: 1px solid rgba(200,146,58,0.2); padding: 16px 24px; z-index: 99; backdrop-filter: blur(12px); }
+.mobile-menu.open { display: block; }
+.mobile-menu ul { list-style: none; display: flex; flex-direction: column; gap: 0; }
+.mobile-menu ul li a { display: block; padding: 14px 0; color: rgba(240,237,232,0.8); text-decoration: none; font-size: 14px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.06); transition: color 0.2s; }
+.mobile-menu ul li a:hover { color: #C8923A; }
 
     /* HERO */
     .hero-wrapper { position: relative; min-height: 92vh; display: flex; align-items: center; overflow: hidden; }
@@ -231,9 +238,21 @@
     </div>
     <div class="nav-right">
       <a href="tel:18002008098" class="nav-phone">1-800-200-8098</a>
+      <button class="hamburger" id="hamburger" onclick="toggleMobile()" aria-label="Menu">
+  <span></span><span></span><span></span>
+</button>
       <a href="#contact" class="btn-primary">Free Quote</a>
     </div>
   </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="/" onclick="closeMobile()">Home</a></li>
+      <li><a href="services/" onclick="closeMobile()">Services</a></li>
+      <li><a href="#regions" onclick="closeMobile()">Locations</a></li>
+      <li><a href="careers/" onclick="closeMobile()">Careers</a></li>
+      <li><a href="#contact" onclick="closeMobile()">Contact</a></li>
+    </ul>
+  </div>
 
   <!-- HERO -->
   <div class="hero-wrapper">
@@ -566,6 +585,8 @@
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 60);
+      function toggleMobile(){document.getElementById('mobileMenu').classList.toggle('open')}
+    function closeMobile(){document.getElementById('mobileMenu').classList.remove('open')}
     });
     function submitQuoteForm() {
       const name = document.getElementById('q-name').value.trim();
