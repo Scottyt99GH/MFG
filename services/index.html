@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MFG Reno Services | Storm Damage, Solar, Generac & Smart Home — Texas</title>
+  <meta name="description" content="Full list of MFG Reno services: storm damage repair, insurance claim navigation, exterior renovation, solar energy, Generac backup power, and smart home automation in Houston, Dallas & Austin TX." />
+  <link rel="canonical" href="https://mfgreno.com/services/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:'DM Sans',sans-serif;background:#0F0F0F;color:#F0EDE8;overflow-x:hidden}
+    .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 48px;display:flex;align-items:center;justify-content:space-between;transition:all 0.4s;background:rgba(15,15,15,0.8);backdrop-filter:blur(12px)}
+    .nav.scrolled{background:rgba(15,15,15,0.97);border-bottom:1px solid rgba(200,146,58,0.15)}
+    .logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;letter-spacing:2px;color:#F0EDE8;text-transform:uppercase;text-decoration:none}
+    .logo span{color:#C8923A}
+    .nav-links{display:flex;gap:28px;list-style:none}
+    .nav-links a{color:rgba(240,237,232,0.7);text-decoration:none;font-size:13px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover{color:#C8923A}
+    .nav-phone{color:#C8923A;font-size:14px;font-weight:600;text-decoration:none}
+    .btn-primary{background:#C8923A;color:#0F0F0F;border:none;padding:11px 24px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all 0.25s;text-decoration:none;display:inline-block}
+    .btn-primary:hover{background:#E0A84A}
+    .page-header{padding:140px 48px 60px;max-width:1400px;margin:0 auto}
+    .page-eyebrow{font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#C8923A;margin-bottom:16px;display:flex;align-items:center;gap:12px}
+    .page-eyebrow::before{content:'';display:block;width:32px;height:1px;background:#C8923A}
+    .page-h1{font-family:'Playfair Display',serif;font-size:clamp(40px,5vw,68px);font-weight:900;line-height:1.05;margin-bottom:20px}
+    .page-h1 em{color:#C8923A;font-style:normal}
+    .page-sub{font-size:16px;color:rgba(240,237,232,0.6);line-height:1.7;max-width:600px}
+    .services-section{padding:0 48px 80px;max-width:1400px;margin:0 auto}
+    .service-block{display:grid;grid-template-columns:1fr 2fr;gap:48px;padding:56px 0;border-top:1px solid rgba(255,255,255,0.06);align-items:start}
+    .service-block:last-child{border-bottom:1px solid rgba(255,255,255,0.06)}
+    .service-block-left{position:sticky;top:100px}
+    .service-number{font-family:'Playfair Display',serif;font-size:64px;font-weight:900;color:rgba(200,146,58,0.15);line-height:1;margin-bottom:8px}
+    .service-block-title{font-family:'Playfair Display',serif;font-size:28px;font-weight:900;margin-bottom:10px}
+    .service-block-tag{font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:#C8923A}
+    .service-block-img{width:100%;height:240px;object-fit:cover;margin-bottom:28px;opacity:0.75}
+    .service-block-desc{font-size:15px;color:rgba(240,237,232,0.65);line-height:1.75;margin-bottom:24px}
+    .service-items{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:28px}
+    .service-item{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:rgba(240,237,232,0.7);line-height:1.5}
+    .service-item::before{content:'→';color:#C8923A;font-weight:700;flex-shrink:0}
+    .warranty-banner{background:rgba(200,146,58,0.08);border:1px solid rgba(200,146,58,0.2);padding:16px 20px;display:flex;align-items:center;gap:12px;font-size:13px;color:rgba(240,237,232,0.7);margin-top:8px}
+    .warranty-banner strong{color:#C8923A}
+    .cta-section{background:linear-gradient(135deg,rgba(200,146,58,0.1) 0%,rgba(200,146,58,0.03) 100%);border:1px solid rgba(200,146,58,0.25);padding:56px 48px;margin:0 0 80px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;max-width:1304px;margin:0 auto 80px}
+    .cta-h2{font-family:'Playfair Display',serif;font-size:36px;font-weight:900;margin-bottom:16px}
+    .cta-sub{font-size:15px;color:rgba(240,237,232,0.6);line-height:1.7;margin-bottom:28px}
+    .cta-items{list-style:none}
+    .cta-items li{display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(240,237,232,0.7);margin-bottom:10px}
+    .cta-items li::before{content:'✓';color:#C8923A;font-weight:700}
+    .footer{border-top:1px solid rgba(255,255,255,0.08);padding:32px 48px;display:flex;justify-content:space-between;align-items:center;max-width:1400px;margin:0 auto}
+    .footer-logo{font-family:'Playfair Display',serif;font-size:18px;font-weight:900;letter-spacing:2px;text-transform:uppercase}
+    .footer-logo span{color:#C8923A}
+    .footer-links{display:flex;gap:20px}
+    .footer-links a{font-size:12px;letter-spacing:1px;text-transform:uppercase;color:rgba(240,237,232,0.35);text-decoration:none}
+    .footer-links a:hover{color:#C8923A}
+    .footer-copy{font-size:12px;color:rgba(240,237,232,0.25)}
+    @media(max-width:900px){.nav{padding:14px 24px}.nav-links{display:none}.nav-phone{display:none}.page-header{padding:100px 24px 40px}.services-section{padding:0 24px 56px}.service-block{grid-template-columns:1fr;gap:24px}.service-block-left{position:static}.service-items{grid-template-columns:1fr}.cta-section{grid-template-columns:1fr;gap:28px;padding:36px 24px;margin:0 16px 56px}.footer{flex-direction:column;gap:16px;text-align:center;padding:28px 24px}}
+  </style>
+</head>
+<body>
+  <nav class="nav" id="navbar">
+    <a href="/" class="logo">MFG<span>Reno</span></a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#regions">Locations</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:16px;">
+      <a href="tel:18002008098" class="nav-phone">1-800-200-8098</a>
+      <a href="/#contact" class="btn-primary">Free Quote</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-eyebrow">Houston · Dallas · Austin, TX</div>
+    <h1 class="page-h1">Our Services.<em>Your Home. Transformed.</em></h1>
+    <p class="page-sub">From storm damage to smart home automation — MFG Reno covers every aspect of your home's exterior, energy, and technology. Licensed, insured, and backed by a lifetime warranty.</p>
+  </div>
+
+  <div class="services-section">
+
+    <!-- SERVICE 1: EXTERIOR & STORM -->
+    <div class="service-block" id="exterior">
+      <div class="service-block-left">
+        <div class="service-number">01</div>
+        <div class="service-block-title">Exterior Renovations & Storm Damage</div>
+        <div class="service-block-tag">Insurance Claim Experts</div>
+      </div>
+      <div>
+        <img class="service-block-img" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=80" alt="Storm damage exterior renovation Texas" loading="lazy" />
+        <p class="service-block-desc">Texas storms are unpredictable and the damage they cause can be overwhelming. MFG Reno specializes in exterior restoration after hail, wind, and storm events — and we handle the entire insurance claim process so you don't have to. From the first call to the final inspection, we're with you every step of the way.</p>
+        <div class="service-items">
+          <div class="service-item">Roof repair &amp; full replacement</div>
+          <div class="service-item">Hail &amp; wind damage assessment</div>
+          <div class="service-item">Siding repair &amp; replacement</div>
+          <div class="service-item">Insurance claim documentation</div>
+          <div class="service-item">Gutters &amp; drainage systems</div>
+          <div class="service-item">Insurance adjuster negotiation</div>
+          <div class="service-item">Fascia &amp; soffit repair</div>
+          <div class="service-item">Full exterior rebuilds</div>
+        </div>
+        <div class="warranty-banner">🛡️ <span><strong>Lifetime limited warranty</strong> on all exterior workmanship. Free truck rolls included with extended warranty — save $250/visit.</span></div>
+      </div>
+    </div>
+
+    <!-- SERVICE 2: ENERGY -->
+    <div class="service-block" id="energy">
+      <div class="service-block-left">
+        <div class="service-number">02</div>
+        <div class="service-block-title">Smart Home Energy Solutions</div>
+        <div class="service-block-tag">Always-On Power</div>
+      </div>
+      <div>
+        <img class="service-block-img" src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1000&q=80" alt="Solar energy panels Texas home" loading="lazy" />
+        <p class="service-block-desc">Power outages in Texas are a real concern. Our energy solutions keep your home running no matter what — solar panels capture the sun's energy during the day, battery storage keeps you powered at night, and a Generac backup generator ensures you're never left in the dark. We design and install the complete system, fully integrated.</p>
+        <div class="service-items">
+          <div class="service-item">Solar panel design &amp; installation</div>
+          <div class="service-item">Battery storage systems</div>
+          <div class="service-item">Generac certified installation</div>
+          <div class="service-item">Whole-home backup power</div>
+          <div class="service-item">Energy monitoring &amp; management</div>
+          <div class="service-item">Utility grid integration</div>
+          <div class="service-item">EV charging station setup</div>
+          <div class="service-item">System maintenance &amp; support</div>
+        </div>
+        <div class="warranty-banner">⚡ <span><strong>Generac Certified Installer.</strong> All systems backed by manufacturer warranty plus MFG Reno's limited lifetime workmanship warranty.</span></div>
+      </div>
+    </div>
+
+    <!-- SERVICE 3: SMART HOME -->
+    <div class="service-block" id="smart-home">
+      <div class="service-block-left">
+        <div class="service-number">03</div>
+        <div class="service-block-title">Home Automation & Smart Technology</div>
+        <div class="service-block-tag">One App. Full Control.</div>
+      </div>
+      <div>
+        <img class="service-block-img" src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1000&q=80" alt="Smart home automation system" loading="lazy" />
+        <p class="service-block-desc">Your home should work for you. We design and install fully integrated smart home systems — everything from security cameras and smart locks to lighting control and climate automation — all accessible through a single app on your phone. Whether you're home or away, you're always in control.</p>
+        <div class="service-items">
+          <div class="service-item">Smart lock installation</div>
+          <div class="service-item">Security camera systems</div>
+          <div class="service-item">Smart lighting control</div>
+          <div class="service-item">Ecobee &amp; Google Nest thermostats</div>
+          <div class="service-item">Whole-home app integration</div>
+          <div class="service-item">Video doorbell setup</div>
+          <div class="service-item">Automated routines &amp; scenes</div>
+          <div class="service-item">Remote monitoring &amp; alerts</div>
+        </div>
+        <div class="warranty-banner">🏠 <span><strong>All systems integrated into one app.</strong> We handle the full setup and ensure everything works together seamlessly from day one.</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <div>
+      <h2 class="cta-h2">Ready to Get Started?</h2>
+      <p class="cta-sub">We offer free in-home or virtual consultations across Houston, Dallas, and Austin. Tell us about your project and we'll build a plan around your goals and budget.</p>
+      <ul class="cta-items">
+        <li>Free in-home or virtual consultation</li>
+        <li>No obligation estimate</li>
+        <li>Licensed &amp; insured in Texas</li>
+        <li>Limited lifetime warranty on all work</li>
+        <li>Free truck rolls — save $250/visit</li>
+      </ul>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <a href="tel:18002008098" class="btn-primary" style="text-align:center;padding:16px;font-size:15px;">📞 Call 1-800-200-8098</a>
+      <a href="mailto:contact@mfgreno.com" class="btn-primary" style="text-align:center;padding:16px;font-size:15px;background:rgba(200,146,58,0.15);color:#C8923A;border:1px solid rgba(200,146,58,0.3);">📧 contact@mfgreno.com</a>
+      <a href="/#contact" class="btn-primary" style="text-align:center;padding:16px;font-size:14px;background:transparent;color:rgba(240,237,232,0.6);border:1px solid rgba(255,255,255,0.1);">Send Us a Message &rarr;</a>
+    </div>
+  </div>
+
+  <footer style="background:#080808;border-top:1px solid rgba(255,255,255,0.06);">
+    <div class="footer">
+      <div class="footer-logo">MFG<span>Reno</span></div>
+      <div class="footer-copy">&copy; 2026 MFG Reno &middot; Licensed &amp; Insured in Texas</div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/houston/">Houston</a>
+        <a href="/dallas/">Dallas</a>
+        <a href="/austin/">Austin</a>
+      </div>
+    </div>
+  </footer>
+  <script>const n=document.getElementById('navbar');window.addEventListener('scroll',()=>n.classList.toggle('scrolled',window.scrollY>60));</script>
+</body>
+</html>

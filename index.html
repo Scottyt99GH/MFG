@@ -1,11 +1,29 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MFG Reno — Home Renovation, Energy & Smart Home</title>
-  <meta name="description" content="Full-scope home renovations, solar energy systems, Generac generators, and smart home automation with Ecobee & Google Nest." />
+  <title>MFG Reno | Storm Repair, Solar Bill Swap & Smart Home — Houston, Dallas, Austin TX</title>
+  <meta name="description" content="Texas-based home renovation, solar energy, Generac backup power & smart home automation. Licensed & insured. Storm damage insurance claim experts. Serving Houston, Dallas & Austin. Free consultation." />
+  <meta name="keywords" content="home renovation Texas, storm damage repair Houston, solar energy Dallas, smart home Austin, Generac installer Texas, insurance claim contractor" />
+  <link rel="canonical" href="https://mfgreno.com/" />
+  <meta property="og:title" content="MFG Reno | Home Renovation & Energy Solutions — Texas" />
+  <meta property="og:description" content="Storm damage experts, solar energy, and smart home automation serving Houston, Dallas & Austin, TX." />
+  <meta property="og:url" content="https://mfgreno.com/" />
+  <meta property="og:type" content="website" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "MFG Reno",
+    "url": "https://mfgreno.com",
+    "telephone": "1-800-200-8098",
+    "email": "contact@mfgreno.com",
+    "areaServed": ["Houston, TX", "Dallas, TX", "Austin, TX"],
+    "description": "Home renovation, solar energy, Generac backup power and smart home automation in Texas.",
+    "priceRange": "$$"
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
@@ -13,264 +31,455 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'DM Sans', sans-serif; background: #0F0F0F; color: #F0EDE8; overflow-x: hidden; }
 
-```
-.nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  padding: 20px 48px;
-  display: flex; align-items: center; justify-content: space-between;
-  transition: all 0.4s ease;
-}
-.nav.scrolled {
-  background: rgba(15,15,15,0.96);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(200,146,58,0.15);
-  padding: 14px 48px;
-}
-.logo { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 900; letter-spacing: 2px; color: #F0EDE8; text-transform: uppercase; text-decoration: none; }
-.logo span { color: #C8923A; }
-.nav-links { display: flex; gap: 36px; list-style: none; }
-.nav-links a { color: rgba(240,237,232,0.7); text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; transition: color 0.2s; }
-.nav-links a:hover { color: #C8923A; }
-.btn-primary { background: #C8923A; color: #0F0F0F; border: none; padding: 12px 28px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; cursor: pointer; transition: all 0.25s; text-decoration: none; display: inline-block; }
-.btn-primary:hover { background: #E0A84A; transform: translateY(-1px); }
-.btn-outline { background: transparent; border: 1.5px solid rgba(240,237,232,0.4); color: #F0EDE8; padding: 12px 28px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; cursor: pointer; transition: all 0.25s; text-decoration: none; display: inline-block; }
-.btn-outline:hover { border-color: #C8923A; color: #C8923A; }
+    /* NAV */
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 16px 48px; display: flex; align-items: center; justify-content: space-between; transition: all 0.4s ease; background: rgba(15,15,15,0.7); backdrop-filter: blur(12px); }
+    .nav.scrolled { background: rgba(15,15,15,0.97); border-bottom: 1px solid rgba(200,146,58,0.15); padding: 12px 48px; }
+    .nav-left { display: flex; align-items: center; gap: 48px; }
+    .logo { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 900; letter-spacing: 2px; color: #F0EDE8; text-transform: uppercase; text-decoration: none; }
+    .logo span { color: #C8923A; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: rgba(240,237,232,0.7); text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: #C8923A; }
+    .nav-right { display: flex; align-items: center; gap: 20px; }
+    .nav-phone { color: #C8923A; font-size: 14px; font-weight: 600; text-decoration: none; letter-spacing: 0.5px; }
+    .nav-phone:hover { color: #E0A84A; }
+    .btn-primary { background: #C8923A; color: #0F0F0F; border: none; padding: 11px 24px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; cursor: pointer; transition: all 0.25s; text-decoration: none; display: inline-block; }
+    .btn-primary:hover { background: #E0A84A; transform: translateY(-1px); }
+    .btn-outline { background: transparent; border: 1.5px solid rgba(240,237,232,0.4); color: #F0EDE8; padding: 12px 28px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; cursor: pointer; transition: all 0.25s; text-decoration: none; display: inline-block; }
+    .btn-outline:hover { border-color: #C8923A; color: #C8923A; }
 
-.hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 0 48px; position: relative; overflow: hidden; }
-.hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 50%, rgba(200,146,58,0.08) 0%, transparent 65%); pointer-events: none; }
-.hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(200,146,58,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(200,146,58,0.04) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; }
-.hero-content { position: relative; z-index: 2; }
-.hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #C8923A; margin-bottom: 24px; }
-.hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: #C8923A; }
-.hero-h1 { font-family: 'Playfair Display', serif; font-size: clamp(48px, 5vw, 80px); font-weight: 900; line-height: 1.05; margin-bottom: 28px; }
-.hero-h1 em { color: #C8923A; font-style: normal; }
-.hero-sub { font-size: 17px; font-weight: 300; color: rgba(240,237,232,0.65); line-height: 1.7; max-width: 480px; margin-bottom: 44px; }
-.hero-ctas { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
-.hero-visual { position: relative; z-index: 2; display: flex; justify-content: center; align-items: center; }
-.hero-card-stack { position: relative; width: 360px; height: 380px; }
-.hero-card { position: absolute; background: rgba(255,255,255,0.04); border: 1px solid rgba(200,146,58,0.15); padding: 28px; }
-.hero-card:nth-child(1) { top: 0; left: 20px; width: 290px; transform: rotate(-2deg); }
-.hero-card:nth-child(2) { top: 40px; left: 0; width: 310px; transform: rotate(1deg); background: rgba(200,146,58,0.06); }
-.hero-card:nth-child(3) { top: 80px; left: 10px; width: 330px; z-index: 3; }
-.card-label { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #C8923A; margin-bottom: 8px; }
-.card-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; margin-bottom: 8px; }
-.card-desc { font-size: 13px; color: rgba(240,237,232,0.55); line-height: 1.6; }
-.card-status { margin-top: 16px; display: flex; align-items: center; font-size: 12px; color: rgba(240,237,232,0.5); }
-.card-dot { width: 8px; height: 8px; border-radius: 50%; background: #5B9E6F; display: inline-block; margin-right: 8px; }
+    /* HERO */
+    .hero-wrapper { position: relative; min-height: 92vh; display: flex; align-items: center; overflow: hidden; }
+    .hero-bg-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; opacity: 0.25; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(15,15,15,0.95) 0%, rgba(15,15,15,0.7) 60%, rgba(15,15,15,0.4) 100%); }
+    .hero-grid-bg { position: absolute; inset: 0; background-image: linear-gradient(rgba(200,146,58,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(200,146,58,0.04) 1px, transparent 1px); background-size: 60px 60px; }
+    .hero { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 60px; padding: 120px 48px 80px; max-width: 1400px; margin: 0 auto; width: 100%; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #C8923A; margin-bottom: 20px; }
+    .hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: #C8923A; }
+    .hero-h1 { font-family: 'Playfair Display', serif; font-size: clamp(44px, 5vw, 76px); font-weight: 900; line-height: 1.05; margin-bottom: 24px; }
+    .hero-h1 em { color: #C8923A; font-style: normal; display: block; }
+    .hero-sub { font-size: 16px; font-weight: 300; color: rgba(240,237,232,0.65); line-height: 1.7; max-width: 460px; margin-bottom: 36px; }
+    .hero-ctas { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-bottom: 36px; }
+    .hero-trust { display: flex; gap: 24px; flex-wrap: wrap; }
+    .trust-badge { font-size: 12px; color: rgba(240,237,232,0.5); display: flex; align-items: center; gap: 6px; }
+    .trust-badge::before { content: '✓'; color: #C8923A; font-weight: 700; }
+    .hero-visual { display: flex; justify-content: center; align-items: center; }
+    .hero-card-stack { display: flex; flex-direction: column; gap: 12px; width: 340px; }
+    .hero-card { background: rgba(20,18,12,0.92); border: 1px solid rgba(200,146,58,0.2); padding: 22px 26px; border-left: 3px solid rgba(200,146,58,0.4); backdrop-filter: blur(8px); }
+    .hero-card:nth-child(2) { margin-left: 16px; border-left-color: rgba(91,158,111,0.6); }
+    .hero-card:nth-child(3) { margin-left: 8px; border-left-color: #C8923A; }
+    .card-label { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #C8923A; margin-bottom: 6px; }
+    .card-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; margin-bottom: 6px; }
+    .card-desc { font-size: 12px; color: rgba(240,237,232,0.55); line-height: 1.6; }
+    .card-status { margin-top: 12px; display: flex; align-items: center; font-size: 11px; color: rgba(240,237,232,0.5); }
+    .card-dot { width: 7px; height: 7px; border-radius: 50%; background: #5B9E6F; display: inline-block; margin-right: 7px; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
 
-.stats-bar { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(200,146,58,0.2); border-bottom: 1px solid rgba(200,146,58,0.2); }
-.stat-item { padding: 40px 24px; border-right: 1px solid rgba(200,146,58,0.1); text-align: center; }
-.stat-item:last-child { border-right: none; }
-.stat-value { font-family: 'Playfair Display', serif; font-size: 44px; font-weight: 900; color: #C8923A; line-height: 1; }
-.stat-label { font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(240,237,232,0.45); margin-top: 8px; }
+    /* STATS */
+    .stats-bar { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(200,146,58,0.2); border-bottom: 1px solid rgba(200,146,58,0.2); }
+    .stat-item { padding: 36px 24px; border-right: 1px solid rgba(200,146,58,0.1); text-align: center; }
+    .stat-item:last-child { border-right: none; }
+    .stat-value { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 900; color: #C8923A; line-height: 1; }
+    .stat-label { font-size: 11px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(240,237,232,0.45); margin-top: 8px; }
 
-.section { padding: 100px 48px; }
-.section-label { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #C8923A; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
-.section-label::after { content: ''; height: 1px; background: rgba(200,146,58,0.3); width: 60px; }
-.section-h2 { font-family: 'Playfair Display', serif; font-size: clamp(32px, 3.5vw, 52px); font-weight: 900; line-height: 1.1; margin-bottom: 60px; max-width: 520px; }
-.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
-.service-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); padding: 48px 40px; cursor: pointer; transition: all 0.3s ease; position: relative; overflow: hidden; }
-.service-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; transform: scaleX(0); transition: transform 0.3s ease; }
-.service-card:hover { background: rgba(255,255,255,0.06); transform: translateY(-4px); }
-.service-card:hover::after { transform: scaleX(1); }
-.service-card.renovation::after { background: #C8923A; }
-.service-card.energy::after { background: #5B9E6F; }
-.service-card.smart::after { background: #4A8FC2; }
-.service-icon { font-size: 36px; margin-bottom: 24px; display: block; }
-.service-tagline { font-size: 10px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 12px; color: rgba(240,237,232,0.4); transition: color 0.2s; }
-.service-card.renovation:hover .service-tagline { color: #C8923A; }
-.service-card.energy:hover .service-tagline { color: #5B9E6F; }
-.service-card.smart:hover .service-tagline { color: #4A8FC2; }
-.service-title { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; margin-bottom: 16px; line-height: 1.2; }
-.service-desc { font-size: 14px; color: rgba(240,237,232,0.55); line-height: 1.75; }
-.service-arrow { display: inline-block; margin-top: 28px; font-size: 13px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: rgba(240,237,232,0.35); transition: all 0.2s; }
-.service-card:hover .service-arrow { color: #C8923A; transform: translateX(4px); }
+    /* INSURANCE BANNER */
+    .insurance-banner { background: linear-gradient(90deg, #1a1200 0%, #2a1e00 50%, #1a1200 100%); border-top: 1px solid rgba(200,146,58,0.3); border-bottom: 1px solid rgba(200,146,58,0.3); padding: 28px 48px; display: flex; align-items: center; justify-content: center; gap: 20px; text-align: center; }
+    .insurance-banner-icon { font-size: 28px; flex-shrink: 0; }
+    .insurance-banner-text { font-size: 15px; color: rgba(240,237,232,0.85); line-height: 1.5; }
+    .insurance-banner-text strong { color: #C8923A; }
 
-.quote-section { margin: 0 48px 100px; background: linear-gradient(135deg, rgba(200,146,58,0.1) 0%, rgba(200,146,58,0.03) 100%); border: 1px solid rgba(200,146,58,0.25); padding: 72px 64px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-.quote-badge { display: inline-block; background: #C8923A; color: #0F0F0F; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 6px 14px; margin-bottom: 24px; }
-.quote-h2 { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
-.quote-sub { font-size: 15px; color: rgba(240,237,232,0.6); line-height: 1.7; margin-bottom: 36px; }
-.quote-features { list-style: none; }
-.quote-features li { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: rgba(240,237,232,0.7); margin-bottom: 14px; line-height: 1.5; }
-.quote-features li::before { content: '✓'; color: #C8923A; font-weight: 700; flex-shrink: 0; }
-.quote-mockup { background: rgba(0,0,0,0.3); border: 1px solid rgba(200,146,58,0.2); padding: 28px; }
-.mockup-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #C8923A; margin-bottom: 12px; font-weight: 600; }
-.mockup-upload { width: 100%; background: rgba(255,255,255,0.05); border: 1.5px dashed rgba(200,146,58,0.3); padding: 32px 20px; text-align: center; color: rgba(240,237,232,0.3); font-size: 13px; margin-bottom: 12px; }
-.mockup-input { background: rgba(255,255,255,0.04); padding: 10px 14px; font-size: 12px; color: rgba(240,237,232,0.35); margin-bottom: 16px; }
-.btn-disabled { background: #C8923A; color: #0F0F0F; border: none; padding: 12px 28px; width: 100%; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; opacity: 0.45; cursor: not-allowed; }
-.mockup-note { font-size: 12px; color: rgba(240,237,232,0.3); text-align: center; margin-top: 12px; }
+    /* SECTIONS */
+    .section { padding: 80px 48px; max-width: 1400px; margin: 0 auto; }
+    .section-label { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #C8923A; margin-bottom: 14px; display: flex; align-items: center; gap: 12px; }
+    .section-label::after { content: ''; height: 1px; background: rgba(200,146,58,0.3); width: 60px; }
+    .section-h2 { font-family: 'Playfair Display', serif; font-size: clamp(30px, 3.5vw, 50px); font-weight: 900; line-height: 1.1; margin-bottom: 48px; max-width: 520px; }
 
-.contact-section { padding: 100px 48px; border-top: 1px solid rgba(255,255,255,0.06); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-.contact-info { display: flex; flex-direction: column; gap: 28px; margin-top: 40px; }
-.contact-item { display: flex; align-items: flex-start; gap: 16px; }
-.contact-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
-.contact-item-label { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #C8923A; margin-bottom: 4px; }
-.contact-item-value { font-size: 15px; color: rgba(240,237,232,0.8); }
-.contact-form { display: flex; flex-direction: column; gap: 16px; margin-top: 40px; }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.form-input, .form-textarea, .form-select { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); color: #F0EDE8; padding: 14px 18px; font-family: 'DM Sans', sans-serif; font-size: 14px; width: 100%; transition: border-color 0.2s; outline: none; }
-.form-input:focus, .form-textarea:focus, .form-select:focus { border-color: #C8923A; }
-.form-input::placeholder, .form-textarea::placeholder { color: rgba(240,237,232,0.3); }
-.form-select { appearance: none; cursor: pointer; }
-.form-select option { background: #1a1a1a; color: #F0EDE8; }
-.form-textarea { resize: vertical; min-height: 120px; }
+    /* SERVICES */
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+    .service-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); cursor: pointer; transition: all 0.3s ease; position: relative; overflow: hidden; }
+    .service-img { width: 100%; height: 180px; object-fit: cover; opacity: 0.6; transition: opacity 0.3s; display: block; }
+    .service-card:hover .service-img { opacity: 0.8; }
+    .service-body { padding: 36px 32px; }
+    .service-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; transform: scaleX(0); transition: transform 0.3s ease; }
+    .service-card:hover { background: rgba(255,255,255,0.05); transform: translateY(-4px); }
+    .service-card:hover::after { transform: scaleX(1); }
+    .service-card.renovation::after { background: #C8923A; }
+    .service-card.energy::after { background: #5B9E6F; }
+    .service-card.smart::after { background: #4A8FC2; }
+    .service-icon { font-size: 32px; margin-bottom: 18px; display: block; }
+    .service-tagline { font-size: 10px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 10px; color: rgba(240,237,232,0.4); transition: color 0.2s; }
+    .service-card.renovation:hover .service-tagline { color: #C8923A; }
+    .service-card.energy:hover .service-tagline { color: #5B9E6F; }
+    .service-card.smart:hover .service-tagline { color: #4A8FC2; }
+    .service-title { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; margin-bottom: 14px; line-height: 1.2; }
+    .service-desc { font-size: 14px; color: rgba(240,237,232,0.55); line-height: 1.75; }
+    .service-arrow { display: inline-block; margin-top: 24px; font-size: 13px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: rgba(240,237,232,0.35); transition: all 0.2s; text-decoration: none; }
+    .service-card:hover .service-arrow { color: #C8923A; transform: translateX(4px); }
 
-.footer { border-top: 1px solid rgba(255,255,255,0.08); padding: 40px 48px; display: flex; justify-content: space-between; align-items: center; }
-.footer-logo { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; }
-.footer-logo span { color: #C8923A; }
-.footer-copy { font-size: 13px; color: rgba(240,237,232,0.35); }
-.footer-links { display: flex; gap: 24px; }
-.footer-links a { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: rgba(240,237,232,0.35); text-decoration: none; transition: color 0.2s; }
-.footer-links a:hover { color: #C8923A; }
+    /* WHY CHOOSE US */
+    .why-section { background: rgba(200,146,58,0.04); border-top: 1px solid rgba(200,146,58,0.12); border-bottom: 1px solid rgba(200,146,58,0.12); padding: 80px 48px; }
+    .why-inner { max-width: 1400px; margin: 0 auto; }
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .why-item { display: flex; gap: 18px; align-items: flex-start; }
+    .why-icon { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+    .why-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .why-desc { font-size: 13px; color: rgba(240,237,232,0.55); line-height: 1.7; }
 
-@media (max-width: 900px) {
-  .nav { padding: 18px 24px; }
-  .nav.scrolled { padding: 12px 24px; }
-  .nav-links { display: none; }
-  .hero { grid-template-columns: 1fr; padding: 120px 24px 80px; text-align: center; }
-  .hero-visual { display: none; }
-  .hero-eyebrow { justify-content: center; }
-  .hero-sub { margin: 0 auto 44px; }
-  .hero-ctas { justify-content: center; }
-  .stats-bar { grid-template-columns: 1fr 1fr; }
-  .stat-item { border-right: none; border-bottom: 1px solid rgba(200,146,58,0.1); padding: 28px; }
-  .services-grid { grid-template-columns: 1fr; }
-  .section { padding: 64px 24px; }
-  .quote-section { grid-template-columns: 1fr; gap: 32px; margin: 0 24px 64px; padding: 40px 28px; }
-  .contact-section { grid-template-columns: 1fr; gap: 0; padding: 64px 24px; }
-  .form-row { grid-template-columns: 1fr; }
-  .footer { flex-direction: column; gap: 20px; text-align: center; padding: 36px 24px; }
-}
-```
+    /* REGIONS */
+    .regions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+    .region-card { position: relative; overflow: hidden; height: 220px; display: flex; align-items: flex-end; text-decoration: none; }
+    .region-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; transition: opacity 0.4s, transform 0.4s; }
+    .region-card:hover .region-img { opacity: 0.6; transform: scale(1.04); }
+    .region-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%); }
+    .region-content { position: relative; z-index: 2; padding: 24px 28px; }
+    .region-name { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 900; color: #F0EDE8; margin-bottom: 4px; }
+    .region-sub { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: #C8923A; }
 
+    /* QUOTE */
+    .quote-section { margin: 0 auto 80px; max-width: 1304px; background: linear-gradient(135deg, rgba(200,146,58,0.1) 0%, rgba(200,146,58,0.03) 100%); border: 1px solid rgba(200,146,58,0.25); padding: 64px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .quote-badge { display: inline-block; background: #C8923A; color: #0F0F0F; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 6px 14px; margin-bottom: 20px; }
+    .quote-h2 { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 900; line-height: 1.1; margin-bottom: 16px; }
+    .quote-sub { font-size: 14px; color: rgba(240,237,232,0.6); line-height: 1.7; margin-bottom: 28px; }
+    .quote-features { list-style: none; }
+    .quote-features li { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: rgba(240,237,232,0.7); margin-bottom: 12px; line-height: 1.5; }
+    .quote-features li::before { content: '✓'; color: #C8923A; font-weight: 700; flex-shrink: 0; }
+    .quote-mockup { background: rgba(0,0,0,0.3); border: 1px solid rgba(200,146,58,0.2); padding: 28px; }
+    .mockup-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #C8923A; margin-bottom: 16px; font-weight: 600; }
+    .mockup-note { font-size: 12px; color: rgba(240,237,232,0.3); text-align: center; margin-top: 12px; }
+    .mockup-note a { color: #C8923A; text-decoration: none; }
+
+    /* CONTACT */
+    .contact-section { padding: 80px 48px; border-top: 1px solid rgba(255,255,255,0.06); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; max-width: 1400px; margin: 0 auto; }
+    .contact-info { display: flex; flex-direction: column; gap: 24px; margin-top: 36px; }
+    .contact-item { display: flex; align-items: flex-start; gap: 16px; }
+    .contact-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+    .contact-item-label { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #C8923A; margin-bottom: 4px; }
+    .contact-item-value { font-size: 15px; color: rgba(240,237,232,0.8); }
+    .contact-item-value a { color: rgba(240,237,232,0.8); text-decoration: none; }
+    .contact-item-value a:hover { color: #C8923A; }
+    .contact-form { display: flex; flex-direction: column; gap: 14px; margin-top: 36px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-input, .form-textarea, .form-select { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); color: #F0EDE8; padding: 13px 16px; font-family: 'DM Sans', sans-serif; font-size: 14px; width: 100%; transition: border-color 0.2s; outline: none; }
+    .form-input:focus, .form-textarea:focus, .form-select:focus { border-color: #C8923A; }
+    .form-input::placeholder, .form-textarea::placeholder { color: rgba(240,237,232,0.3); }
+    .form-select { appearance: none; cursor: pointer; }
+    .form-select option { background: #1a1a1a; color: #F0EDE8; }
+    .form-textarea { resize: vertical; min-height: 110px; }
+
+    /* FOOTER */
+    .footer { border-top: 1px solid rgba(255,255,255,0.08); padding: 40px 48px; max-width: 1400px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 36px; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
+    .footer-logo span { color: #C8923A; }
+    .footer-tagline { font-size: 13px; color: rgba(240,237,232,0.4); line-height: 1.6; margin-bottom: 16px; }
+    .footer-contact-link { display: block; font-size: 13px; color: rgba(240,237,232,0.5); text-decoration: none; margin-bottom: 6px; }
+    .footer-contact-link:hover { color: #C8923A; }
+    .footer-col-title { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(240,237,232,0.35); margin-bottom: 16px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { font-size: 13px; color: rgba(240,237,232,0.5); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: #C8923A; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06); }
+    .footer-copy { font-size: 12px; color: rgba(240,237,232,0.25); }
+    .footer-brands { display: flex; gap: 20px; }
+    .footer-brands a { font-size: 12px; color: rgba(240,237,232,0.3); text-decoration: none; transition: color 0.2s; }
+    .footer-brands a:hover { color: #C8923A; }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .why-grid { grid-template-columns: 1fr 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 900px) {
+      .nav { padding: 14px 24px; }
+      .nav.scrolled { padding: 10px 24px; }
+      .nav-links { display: none; }
+      .nav-phone { display: none; }
+      .hero { grid-template-columns: 1fr; padding: 100px 24px 60px; gap: 40px; }
+      .hero-visual { display: none; }
+      .hero-h1 { font-size: clamp(40px, 8vw, 56px); }
+      .hero-eyebrow { justify-content: flex-start; }
+      .stats-bar { grid-template-columns: 1fr 1fr; }
+      .stat-item { border-right: none; border-bottom: 1px solid rgba(200,146,58,0.1); padding: 24px; }
+      .stat-item:nth-child(odd) { border-right: 1px solid rgba(200,146,58,0.1); }
+      .services-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .regions-grid { grid-template-columns: 1fr; }
+      .section { padding: 56px 24px; }
+      .why-section { padding: 56px 24px; }
+      .quote-section { grid-template-columns: 1fr; gap: 32px; padding: 36px 24px; margin: 0 16px 56px; }
+      .contact-section { grid-template-columns: 1fr; gap: 0; padding: 56px 24px; }
+      .form-row { grid-template-columns: 1fr; }
+      .insurance-banner { flex-direction: column; padding: 24px; }
+      .footer { padding: 36px 24px; }
+      .footer-top { grid-template-columns: 1fr; gap: 28px; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+    }
   </style>
 </head>
 <body>
 
   <nav class="nav" id="navbar">
-    <a href="#" class="logo">MFG<span>Reno</span></a>
-    <ul class="nav-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#quote">Quote Tool</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a href="#contact" class="btn-primary">Get a Quote</a>
+    <div class="nav-left">
+      <a href="/" class="logo">MFG<span>Reno</span></a>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="services/">All Services</a></li>
+        <li><a href="#regions">Locations</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <a href="tel:18002008098" class="nav-phone">1-800-200-8098</a>
+      <a href="#contact" class="btn-primary">Free Quote</a>
+    </div>
   </nav>
 
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-grid"></div>
-    <div class="hero-content">
-      <div class="hero-eyebrow">Licensed &amp; Insured Contractors</div>
-      <h1 class="hero-h1">Your Home.<br><em>Elevated.</em></h1>
-      <p class="hero-sub">From full-scale renovations to solar energy systems and smart home automation — MFG Reno delivers end-to-end home transformation with expert craftsmanship.</p>
-      <div class="hero-ctas">
-        <a href="#contact" class="btn-primary">Start Your Project &rarr;</a>
-        <a href="#services" class="btn-outline">View Services</a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="hero-card-stack">
-        <div class="hero-card">
-          <div class="card-label">Renovation</div>
-          <div class="card-title">Kitchen Remodel</div>
+  <!-- HERO -->
+  <div class="hero-wrapper">
+    <div class="hero-bg-img"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-grid-bg"></div>
+    <div class="hero">
+      <div class="hero-content">
+        <div class="hero-eyebrow">Licensed &amp; Insured — Texas</div>
+        <h1 class="hero-h1">Your Home.<em>Elevated.</em></h1>
+        <p class="hero-sub">Storm damage repairs, solar energy systems, and smart home automation — MFG Reno delivers end-to-end home transformation across Houston, Dallas &amp; Austin.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn-primary">Start Your Project &rarr;</a>
+          <a href="#services" class="btn-outline">View Services</a>
         </div>
-        <div class="hero-card">
-          <div class="card-label">Energy</div>
-          <div class="card-title">Solar + Battery</div>
-        </div>
-        <div class="hero-card">
-          <div class="card-label">Active Project</div>
-          <div class="card-title">Smith Residence</div>
-          <p class="card-desc">Smart home + solar installation, 14kW system with Generac backup and Ecobee integration.</p>
-          <div class="card-status"><span class="card-dot"></span>In progress &middot; Est. complete Apr 28</div>
+        <div class="hero-trust">
+          <span class="trust-badge">Free Consultation</span>
+          <span class="trust-badge">35+ Yrs Experience</span>
+          <span class="trust-badge">Lifetime Warranty</span>
+          <span class="trust-badge">Insurance Experts</span>
         </div>
       </div>
+      <div class="hero-visual">
+        <div class="hero-card-stack">
+          <div class="hero-card">
+            <div class="card-label">Storm Damage</div>
+            <div class="card-title">Exterior Renovation</div>
+            <div class="card-desc">Insurance claim navigation &amp; full exterior restoration.</div>
+          </div>
+          <div class="hero-card">
+            <div class="card-label">Energy</div>
+            <div class="card-title">Solar + Generac Backup</div>
+            <div class="card-desc">Never lose power. Solar, battery storage &amp; generator systems.</div>
+          </div>
+          <div class="hero-card">
+            <div class="card-label">Smart Home</div>
+            <div class="card-title">One App. Full Control.</div>
+            <div class="card-desc">Locks, cameras, climate — all integrated in a single platform.</div>
+            <div class="card-status"><span class="card-dot"></span>Serving Houston, Dallas &amp; Austin</div>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
-
-  <div class="stats-bar">
-    <div class="stat-item"><div class="stat-value">500+</div><div class="stat-label">Projects Completed</div></div>
-    <div class="stat-item"><div class="stat-value">12yr</div><div class="stat-label">In Business</div></div>
-    <div class="stat-item"><div class="stat-value">98%</div><div class="stat-label">Client Satisfaction</div></div>
-    <div class="stat-item"><div class="stat-value">3</div><div class="stat-label">Trusted Suppliers</div></div>
   </div>
 
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stat-item"><div class="stat-value">Free</div><div class="stat-label">In-Home or Virtual Consult</div></div>
+    <div class="stat-item"><div class="stat-value">35+</div><div class="stat-label">Years Combined Experience</div></div>
+    <div class="stat-item"><div class="stat-value">Lifetime</div><div class="stat-label">Limited Warranty</div></div>
+    <div class="stat-item"><div class="stat-value">TX</div><div class="stat-label">Licensed &amp; Insured</div></div>
+  </div>
+
+  <!-- INSURANCE BANNER -->
+  <div class="insurance-banner">
+    <span class="insurance-banner-icon">🛡️</span>
+    <div class="insurance-banner-text">
+      <strong>Storm damage? We fight your insurance claim — using insurance-approved Xactimate software.</strong> Same tool adjusters use. Every detail documented. Every dollar recovered.
+      <a href="#contact" style="color:#C8923A; margin-left:10px; font-weight:600; text-decoration:none;">Get a Free Storm Inspection &rarr;</a>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
   <section class="section" id="services">
     <div class="section-label">What We Do</div>
     <h2 class="section-h2">Three Ways We Transform Your Home</h2>
     <div class="services-grid">
       <div class="service-card renovation">
-        <span class="service-icon">&#127968;</span>
-        <div class="service-tagline">Spaces Reimagined</div>
-        <div class="service-title">Home Renovation</div>
-        <p class="service-desc">Full-scope residential renovations — kitchens, baths, basements, additions, and whole-home transformations built to last.</p>
-        <span class="service-arrow">Learn more &rarr;</span>
+        <img class="service-img" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Exterior home renovation and storm damage repair Texas" loading="lazy" />
+        <div class="service-body">
+          <span class="service-icon">🏚️</span>
+          <div class="service-tagline">Insurance-Approved Software</div>
+          <div class="service-title">Exterior Renovations</div>
+          <p class="service-desc">From storm-damaged roofs to full exterior rebuilds — we handle the repairs and fight the insurance battle for you. We document, file, and negotiate your claim so you get what you're owed.</p>
+          <a href="services/" class="service-arrow">Learn more &rarr;</a>
+        </div>
       </div>
       <div class="service-card energy">
-        <span class="service-icon">&#9889;</span>
-        <div class="service-tagline">Power Your Future</div>
-        <div class="service-title">Energy Solutions</div>
-        <p class="service-desc">Solar panels, battery storage, and Generac backup generators engineered to reduce your bills and protect your home from outages.</p>
-        <span class="service-arrow">Learn more &rarr;</span>
+        <img class="service-img" src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80" alt="Solar energy and Generac backup power Texas" loading="lazy" />
+        <div class="service-body">
+          <span class="service-icon">⚡</span>
+          <div class="service-tagline">Always-On Power</div>
+          <div class="service-title">Smart Home Energy</div>
+          <p class="service-desc">For most families, losing power is an inconvenience. For seniors and those who depend on oxygen, CPAP, or dialysis — it's a medical emergency. Our solar, battery, and Generac systems ensure power never stops. And through our Bill Swap, in 80% of cases the monthly savings cover the entire upgrade.</p>
+          <a href="services/" class="service-arrow">Learn more &rarr;</a>
+        </div>
       </div>
       <div class="service-card smart">
-        <span class="service-icon">&#127969;</span>
-        <div class="service-tagline">Intelligence Built In</div>
-        <div class="service-title">Smart Home</div>
-        <p class="service-desc">Ecobee and Google Nest integrations — thermostats, security, and automation systems that make your home work smarter.</p>
-        <span class="service-arrow">Learn more &rarr;</span>
+        <img class="service-img" src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80" alt="Smart home automation Texas" loading="lazy" />
+        <div class="service-body">
+          <span class="service-icon">🏠</span>
+          <div class="service-tagline">One App. Full Control.</div>
+          <div class="service-title">Home Automation</div>
+          <p class="service-desc">We build around the technology you already use — Apple, Android, or Samsung. We integrate your existing devices, upgrade where it makes sense, and keep everything within your budget. No ripping out what works. Just smarter living.</p>
+          <a href="services/" class="service-arrow">Learn more &rarr;</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <div class="quote-section" id="quote">
-    <div>
-      <span class="quote-badge">Coming Soon</span>
-      <h2 class="quote-h2">Get a Real Quote &mdash; Instantly</h2>
-      <p class="quote-sub">Upload photos of your space, describe your project, and our system will generate a detailed estimate linked directly to our supplier pricing. No guesswork. No surprises.</p>
-      <ul class="quote-features">
-        <li>Upload photos and describe your project in plain language</li>
-        <li>AI identifies materials and scope of work</li>
-        <li>Pricing pulled live from our 3 trusted suppliers</li>
-        <li>Receive a detailed, itemized estimate within minutes</li>
-      </ul>
-    </div>
-    <div>
-      <div class="quote-mockup">
-        <div class="mockup-label">Your Project</div>
-        <div class="mockup-upload">&#128247; Upload Photos Here</div>
-        <div class="mockup-input">Describe your project...</div>
-        <button class="btn-disabled">Generate Estimate (Coming Soon)</button>
-        <p class="mockup-note">In the meantime, contact us for a free consultation</p>
+  <!-- WHY CHOOSE US -->
+  <div class="why-section">
+    <div class="why-inner">
+      <div class="section-label">Why MFG Reno</div>
+      <h2 class="section-h2">Built Different. Backed by More.</h2>
+      <div class="why-grid">
+        <div class="why-item">
+          <span class="why-icon">🛡️</span>
+          <div>
+            <div class="why-title">Insurance Claim Experts</div>
+            <p class="why-desc">We don't just fix the damage — we navigate the entire insurance process for you. Our team knows what adjusters look for and we fight to maximize your payout.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <span class="why-icon">📋</span>
+          <div>
+            <div class="why-title">Limited Lifetime Warranty</div>
+            <p class="why-desc">Every project we complete is backed by a limited lifetime warranty on workmanship. We stand behind our work — long after the last nail is driven.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <span class="why-icon">🚛</span>
+          <div>
+            <div class="why-title">Free Truck Rolls Included</div>
+            <p class="why-desc">Our extended workmanship warranty includes free service visits — a $250 value per visit. No surprise charges when you need us to come back.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <span class="why-icon">📞</span>
+          <div>
+            <div class="why-title">Free Consultation</div>
+            <p class="why-desc">Not sure where to start? We offer free in-home or virtual consultations. We'll assess your needs, walk you through your options, and give you an honest recommendation.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <span class="why-icon">⚡</span>
+          <div>
+            <div class="why-title">Generac Certified Installer</div>
+            <p class="why-desc">As a certified Generac installer, we deliver manufacturer-backed backup power systems that are installed to the highest standard and fully covered under warranty.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <span class="why-icon">🏆</span>
+          <div>
+            <div class="why-title">35+ Years Combined Experience</div>
+            <p class="why-desc">Our core team brings over 35 years of combined construction experience across exterior work, energy systems, and smart home technology.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
+  <!-- REGIONS -->
+  <section class="section" id="regions">
+    <div class="section-label">Service Areas</div>
+    <h2 class="section-h2">Serving Texas</h2>
+    <div class="regions-grid">
+      <a href="houston/" class="region-card">
+        <img class="region-img" src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=800&q=80" alt="Houston Texas home renovation" loading="lazy" />
+        <div class="region-overlay"></div>
+        <div class="region-content">
+          <div class="region-name">Houston</div>
+          <div class="region-sub">Storm Damage · Solar · Smart Home</div>
+        </div>
+      </a>
+      <a href="dallas/" class="region-card">
+        <img class="region-img" src="https://images.unsplash.com/photo-1545194445-dddb8f4487c6?auto=format&fit=crop&w=800&q=80" alt="Dallas Texas home renovation" loading="lazy" />
+        <div class="region-overlay"></div>
+        <div class="region-content">
+          <div class="region-name">Dallas</div>
+          <div class="region-sub">Storm Damage · Solar · Smart Home</div>
+        </div>
+      </a>
+      <a href="austin/" class="region-card">
+        <img class="region-img" src="https://images.unsplash.com/photo-1531218150217-54595bc2b934?auto=format&fit=crop&w=800&q=80" alt="Austin Texas home renovation" loading="lazy" />
+        <div class="region-overlay"></div>
+        <div class="region-content">
+          <div class="region-name">Austin</div>
+          <div class="region-sub">Storm Damage · Solar · Smart Home</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- QUOTE TOOL -->
+  <div class="quote-section" id="quote">
+    <div>
+      <span class="quote-badge">Coming Soon</span>
+      <h2 class="quote-h2">Get a Real Quote — Instantly</h2>
+      <p class="quote-sub">Upload photos of your space, describe your project, and our system generates a detailed estimate linked to live supplier pricing. No guesswork. No surprises.</p>
+      <ul class="quote-features">
+        <li>Upload photos and describe your project in plain language</li>
+        <li>AI identifies materials and full scope of work</li>
+        <li>Pricing pulled live from our trusted suppliers</li>
+        <li>Receive a detailed, itemized estimate within minutes</li>
+        <li>Limited lifetime warranty on all completed work</li>
+        <li>Free truck rolls with extended workmanship warranty — save $250/visit</li>
+      </ul>
+    </div>
+    <div>
+      <div class="quote-mockup">
+        <div class="mockup-label">Be First to Know When It Launches</div>
+        <div id="quote-form">
+          <input class="form-input" type="text" id="q-name" placeholder="Full Name *" style="margin-bottom:10px;" />
+          <input class="form-input" type="email" id="q-email" placeholder="Email Address *" style="margin-bottom:10px;" />
+          <input class="form-input" type="tel" id="q-phone" placeholder="Phone Number (optional)" style="margin-bottom:10px;" />
+          <input class="form-input" type="text" id="q-address" placeholder="Property Address (optional)" style="margin-bottom:16px;" />
+          <button class="btn-primary" onclick="submitQuoteForm()" style="width:100%; padding:14px; font-size:13px;">Notify Me When Live &rarr;</button>
+          <p id="quote-msg" style="font-size:12px; color:#C8923A; text-align:center; margin-top:12px; min-height:18px;"></p>
+        </div>
+        <p class="mockup-note">In the meantime, <a href="#contact">contact us</a> for a free consultation</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
   <section class="contact-section" id="contact">
     <div>
       <div class="section-label">Get In Touch</div>
       <h2 class="section-h2">Let's Talk About Your Project</h2>
       <div class="contact-info">
         <div class="contact-item">
-          <span class="contact-icon">&#128231;</span>
+          <span class="contact-icon">📞</span>
+          <div>
+            <div class="contact-item-label">Phone</div>
+            <div class="contact-item-value"><a href="tel:18002008098">1-800-200-8098</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📧</span>
           <div>
             <div class="contact-item-label">Email</div>
-            <div class="contact-item-value">contact@mfgreno.com</div>
+            <div class="contact-item-value"><a href="mailto:contact@mfgreno.com">contact@mfgreno.com</a></div>
           </div>
         </div>
         <div class="contact-item">
-          <span class="contact-icon">&#128205;</span>
+          <span class="contact-icon">📍</span>
           <div>
             <div class="contact-item-label">Service Area</div>
-            <div class="contact-item-value">Greater Reno, NV &amp; Surrounding Areas</div>
+            <div class="contact-item-value">Houston, Dallas &amp; Austin, TX</div>
           </div>
         </div>
         <div class="contact-item">
-          <span class="contact-icon">&#128336;</span>
+          <span class="contact-icon">🕐</span>
           <div>
             <div class="contact-item-label">Hours</div>
-            <div class="contact-item-value">Mon&ndash;Fri 8am&ndash;6pm &middot; Sat by appointment</div>
+            <div class="contact-item-value">Mon–Fri 8am–6pm &middot; Sat by appointment</div>
           </div>
         </div>
       </div>
@@ -285,8 +494,9 @@
         <input class="form-input" type="tel" placeholder="Phone Number" />
         <select class="form-select">
           <option value="" disabled selected>Type of Project</option>
-          <option>Home Renovation</option>
-          <option>Solar / Energy</option>
+          <option>Storm Damage / Insurance Claim</option>
+          <option>Exterior Renovation</option>
+          <option>Solar / Energy System</option>
           <option>Generac Generator</option>
           <option>Smart Home Automation</option>
           <option>Multiple Services</option>
@@ -297,13 +507,57 @@
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="footer-logo">MFG<span>Reno</span></div>
-    <div class="footer-copy">&copy; 2026 MFG Reno &middot; All rights reserved</div>
-    <div class="footer-links">
-      <a href="#services">Services</a>
-      <a href="#quote">Quote Tool</a>
-      <a href="#contact">Contact</a>
+  <!-- FOOTER -->
+  <footer style="background:#080808; border-top: 1px solid rgba(255,255,255,0.06);">
+    <div class="footer">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">MFG<span>Reno</span></div>
+          <p class="footer-tagline">Home renovation, smart energy &amp; automation experts serving Houston, Dallas &amp; Austin, TX. Licensed, insured, and backed by a lifetime warranty.</p>
+          <a href="tel:18002008098" class="footer-contact-link">📞 1-800-200-8098</a>
+          <a href="mailto:contact@mfgreno.com" class="footer-contact-link">📧 contact@mfgreno.com</a>
+        </div>
+        <div>
+          <div class="footer-col-title">Services</div>
+          <ul class="footer-links">
+            <li><a href="services/">Exterior Renovations</a></li>
+            <li><a href="services/">Storm Damage &amp; Insurance</a></li>
+            <li><a href="services/">Solar Energy Systems</a></li>
+            <li><a href="services/">Generac Backup Power</a></li>
+            <li><a href="services/">Smart Home Automation</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Locations</div>
+          <ul class="footer-links">
+            <li><a href="houston/">Houston, TX</a></li>
+            <li><a href="dallas/">Dallas, TX</a></li>
+            <li><a href="austin/">Austin, TX</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Company</div>
+          <ul class="footer-links">
+            <li><a href="#contact">Free Consultation</a></li>
+            <li><a href="#quote">Quote Tool</a></li>
+            <li><a href="mailto:contact@mfgreno.com">Contact Us</a></li>
+          </ul>
+          <div style="margin-top:20px;">
+            <div class="footer-col-title">Our Brands</div>
+            <ul class="footer-links">
+              <li><a href="https://mfgroofing.com" target="_blank">MFG Roofing</a></li>
+              <li><a href="https://mfg.energy" target="_blank">MFG Energy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">&copy; 2026 MFG Reno &middot; A DDT Construction Company &middot; Licensed &amp; Insured in Texas</div>
+        <div class="footer-brands">
+          <a href="https://mfgroofing.com" target="_blank">mfgroofing.com</a>
+          <a href="https://mfg.energy" target="_blank">mfg.energy</a>
+        </div>
+      </div>
     </div>
   </footer>
 
@@ -312,7 +566,16 @@
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 60);
     });
+    function submitQuoteForm() {
+      const name = document.getElementById('q-name').value.trim();
+      const email = document.getElementById('q-email').value.trim();
+      const msg = document.getElementById('quote-msg');
+      if (!name) { msg.textContent = 'Please enter your full name.'; msg.style.color = '#e07070'; return; }
+      if (!email || !email.includes('@')) { msg.textContent = 'Please enter a valid email address.'; msg.style.color = '#e07070'; return; }
+      msg.style.color = '#C8923A';
+      msg.textContent = "You're on the list! We'll be in touch soon.";
+      document.getElementById('quote-form').querySelectorAll('input').forEach(i => i.value = '');
+    }
   </script>
-
 </body>
 </html>
