@@ -79,6 +79,14 @@
       .footer{flex-direction:column;gap:14px;text-align:center;padding:28px 24px}
     }
   </style>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZDJ5R310FR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZDJ5R310FR');
+  </script>
 </head>
 <body>
   <nav class="nav" id="navbar">
@@ -117,6 +125,7 @@
   <div class="roles-section">
     <div class="section-label">Open Positions</div>
     <div class="section-h2">Current Openings</div>
+
     <div class="roles-grid">
       <div class="role-card">
         <span class="role-icon">🏚️</span>
@@ -156,20 +165,22 @@
       </div>
     </div>
 
+    <!-- APPLICATION FORM -->
     <div class="apply-section" id="apply">
       <h2 class="apply-h2">Apply Now</h2>
       <p class="apply-sub">Fill out the form below. We review every application and will be in touch within 3–5 business days. Fields marked * are required.</p>
 
-      <form action="https://formspree.io/f/xnjlwner" method="POST" enctype="multipart/form-data" id="careers-form">
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" enctype="multipart/form-data" id="careers-form">
         <input type="hidden" name="_subject" value="New Job Application — MFG Reno" />
         <input type="hidden" name="_next" value="https://mfgreno.com/careers/?thanks=true" />
+
         <div class="form-grid">
           <input class="form-input" type="text" name="first_name" placeholder="First Name *" required />
           <input class="form-input" type="text" name="last_name" placeholder="Last Name *" required />
         </div>
-        <input class="form-input" type="email" name="email" placeholder="Email Address *" required />
-        <input class="form-input" type="tel" name="phone" placeholder="Phone Number *" required />
-        <select class="form-select" name="position" required>
+        <input class="form-input" type="email" name="email" placeholder="Email Address *" required style="display:block;margin-bottom:14px;" />
+        <input class="form-input" type="tel" name="phone" placeholder="Phone Number *" required style="display:block;margin-bottom:14px;" />
+        <select class="form-select" name="position" required style="margin-bottom:14px;">
           <option value="" disabled selected>Position Applying For *</option>
           <option>Exterior Renovation Crew</option>
           <option>Solar &amp; Generac Installer</option>
@@ -178,21 +189,23 @@
           <option>Sales &amp; Project Consultant</option>
           <option>General Application</option>
         </select>
-        <select class="form-select" name="location" required>
+        <select class="form-select" name="location" required style="margin-bottom:14px;">
           <option value="" disabled selected>Preferred Location *</option>
           <option>Houston, TX</option>
           <option>Dallas, TX</option>
           <option>Austin, TX</option>
           <option>Open to All Locations</option>
         </select>
-        <textarea class="form-textarea" name="message" placeholder="Tell us about yourself — your experience, what you're looking for, and why MFG Reno (optional)..."></textarea>
+        <textarea class="form-textarea" name="message" placeholder="Tell us about yourself — your experience, what you're looking for, and why MFG Reno (optional)..." style="margin-bottom:14px;display:block;"></textarea>
+
         <div class="resume-box" onclick="document.getElementById('resumeFile').click()">
           <input type="file" id="resumeFile" name="resume" accept=".pdf,.doc,.docx" onchange="handleFile(this)" />
           <span class="resume-icon">📄</span>
           <div class="resume-text"><strong>Click to upload your resume</strong><br />PDF, DOC, or DOCX accepted</div>
           <div id="fileName" style="margin-top:8px;font-size:12px;color:#C8923A;min-height:16px;"></div>
         </div>
-        <p class="resume-alt">Or email your resume to <a href="mailto:contact@mfgreno.com?subject=Job Application">contact@mfgreno.com</a></p>
+        <p class="resume-alt">Or email your resume to <a href="mailto:contact@mfgreno.com?subject=Job Application">contact@mfgreno.com</a> with subject "Job Application"</p>
+
         <button type="submit" class="btn-primary" style="width:100%;padding:15px;font-size:14px;">Submit Application &rarr;</button>
         <p class="form-msg" id="a-msg"></p>
       </form>
@@ -222,9 +235,12 @@
   <script>
     const n = document.getElementById('navbar');
     window.addEventListener('scroll', () => n.classList.toggle('scrolled', window.scrollY > 60));
+
     function handleFile(input) {
       if (input.files[0]) document.getElementById('fileName').textContent = '✓ ' + input.files[0].name;
     }
+
+    // Show thank you message if redirected back after submission
     if (window.location.search.includes('thanks=true')) {
       document.getElementById('careers-form').style.display = 'none';
       document.getElementById('thanks-msg').style.display = 'block';
