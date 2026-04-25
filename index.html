@@ -232,6 +232,9 @@
     gtag('js', new Date());
     gtag('config', 'G-ZDJ5R310FR');
   </script>
+  <!-- Calendly -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </head>
 <body>
 
@@ -251,7 +254,7 @@
       <button class="hamburger" id="hamburger" onclick="toggleMobile()" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
-      <a href="#contact" class="btn-primary">Free Quote</a>
+      <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mfgreno/30min'});return false;" class="btn-primary">Book Free Consult</a>
     </div>
   </nav>
   <div class="mobile-menu" id="mobileMenu">
@@ -515,7 +518,10 @@
       </div>
     </div>
     <div>
-      <div class="contact-form">
+            <!-- Calendly inline -->
+      <div class="calendly-inline-widget" data-url="https://calendly.com/mfgreno/30min" style="min-width:280px;height:630px;margin-bottom:24px;"></div>
+      <script>Calendly.initInlineWidgets();</script>
+<div class="contact-form">
         <div class="form-row">
           <input class="form-input" type="text" placeholder="First Name" />
           <input class="form-input" type="text" placeholder="Last Name" />
